@@ -20,7 +20,7 @@ export function Logo({ variant = 'primary' }: LogoProps) {
     ),
     secondary: (
       <div className="bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text p-1 font-poppins font-bold text-transparent">
-        <div className="-mb-1 text-2xl leading-none">
+        <div className="text-2xl leading-none">
           &#123;
           <span className="text-2xl leading-none tracking-tight">silva</span>
           &#125;
