@@ -39,9 +39,7 @@ export default function Template({ children }: TemplateProps) {
           <ModeToggle />
         </div>
       </nav>
-      <main className="flex  flex-col items-center justify-between p-24">
-        {children}
-      </main>
+      <main className="px-10">{children}</main>
     </div>
   )
 }
