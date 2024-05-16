@@ -15,7 +15,7 @@ export function NavLink({ href, children }: NavLinkProps) {
       href={href}
       data-current={currentPath === href}
       className={
-        'transition-colors duration-200 ease-in-out hover:text-primary data-[current=true]:text-primary'
+        'w-full text-muted-foreground transition-colors duration-200 ease-in-out hover:text-primary data-[current=true]:text-primary'
       }
     >
       {children}
