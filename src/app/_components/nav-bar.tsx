@@ -26,11 +26,23 @@ export function NavBar() {
       </ul>
 
       <div className="flex items-center gap-2 sm:gap-4">
-        <a href="#">
-          <FaGithub className="text-2xl text-muted-foreground" />
+        <a
+          href="https://github.com/cleysonsilvame"
+          target="_blank"
+          title="Github"
+        >
+          <FaGithub className="text-2xl text-muted-foreground">
+            <span className="sr-only">Github</span>
+          </FaGithub>
         </a>
-        <a href="#">
-          <FaLinkedin className="text-2xl text-muted-foreground" />
+        <a
+          href="http://linkedin.com/in/cleyson-silva-639b01188"
+          target="_blank"
+          title="Linkedin"
+        >
+          <FaLinkedin className="text-2xl text-muted-foreground">
+            <span className="sr-only">Linkedin</span>
+          </FaLinkedin>
         </a>
 
         <ModeToggle />

@@ -1,18 +1,20 @@
 import Image from 'next/image'
 
+import { Header } from '@/components/header'
+
 export function TechStack() {
   return (
     <div className="space-y-3 text-center">
-      <h2 className="text-2xl font-bold md:text-4xl">My Tech Stack</h2>
-      <h3 className="text-sm font-medium text-muted-foreground md:text-lg">
-        Technologies I’ve been working with recently
-      </h3>
+      <Header
+        title="My Tech Stack"
+        subtitle="Technologies I’ve been working with recently"
+      />
 
       <ul className="grid grid-cols-[repeat(auto-fill,3rem)] justify-center gap-6 pt-2 text-xs text-muted-foreground md:grid-cols-[repeat(auto-fill,6rem)] md:gap-8 md:pt-8 md:text-sm">
         {techStack.map((tech) => (
           <li
             key={tech.alt}
-            className="flex flex-col items-center justify-center"
+            className="flex flex-col items-center justify-center rounded-lg transition duration-300 ease-in-out hover:scale-110 hover:shadow-xl"
           >
             <Image
               alt={tech.alt}
