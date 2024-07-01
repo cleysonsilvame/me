@@ -4,7 +4,7 @@ import { ProjectsList } from '../_components/projects-list'
 
 export default function Projects() {
   return (
-    <div className="my-10">
+    <div className="my-10 flex-1">
       <div className="space-y-3">
         <Header title="Projects" subtitle="Things I've built so far" />
       </div>

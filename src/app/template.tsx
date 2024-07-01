@@ -1,3 +1,4 @@
+import { Footer } from './_components/footer'
 import { NavBar } from './_components/nav-bar'
 
 interface TemplateProps {
@@ -6,9 +7,11 @@ interface TemplateProps {
 
 export default function Template({ children }: TemplateProps) {
   return (
-    <div className="container mx-auto min-h-screen px-10">
+    <div className="container mx-auto flex min-h-screen flex-col px-10">
       <NavBar />
-      {children}
+      <div className="flex flex-1">{children}</div>
+
+      <Footer />
     </div>
   )
 }
