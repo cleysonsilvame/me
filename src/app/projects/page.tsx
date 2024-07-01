@@ -9,7 +9,7 @@ export default function Projects() {
         <Header title="Projects" subtitle="Things I've built so far" />
       </div>
 
-      <ProjectsList className="mt-8 justify-start" />
+      <ProjectsList className="mt-8 justify-center" />
     </div>
   )
 }

@@ -13,7 +13,7 @@ export default function Home() {
       <div className="space-y-3 text-center">
         <Header title="Projects" subtitle="Things I've built so far" />
 
-        <ProjectsList />
+        <ProjectsList variant="compact" />
       </div>
     </main>
   )
