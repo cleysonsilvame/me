@@ -2,9 +2,9 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
-import { ThemeProvider } from 'next-themes'
 
 import { cn } from '@/lib/utils'
+import { ThemeProvider } from '@/providers/theme-provider'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 const poppins = Poppins({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
