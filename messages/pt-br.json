@@ -41,5 +41,9 @@
   },
   "ContactPage": {
     "description": "Para qualquer dúvida, envie-me uma <link>mensagem!</link>"
+  },
+  "LocaleToggle": {
+    "button": "Mudar linguagem",
+    "locale": "{locale, select, en {🇺🇸 English} pt_br {🇧🇷 Brasil} other {Unknown}}"
   }
 }

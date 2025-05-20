@@ -41,5 +41,9 @@
   },
   "ContactPage": {
     "description": "For any questions, please send me a <link>message!</link>"
+  },
+  "LocaleToggle": {
+    "button": "Switch language",
+    "locale": "{locale, select, en {🇺🇸 English} pt_br {🇧🇷 Brazil} other {Unknown}}"
   }
 }
