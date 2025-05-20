@@ -2,9 +2,7 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      {
-        hostname: 'th.bing.com',
-      },
+      new URL('https://raw.githubusercontent.com/**'),
     ],
   },
 }

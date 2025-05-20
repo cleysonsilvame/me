@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
 import { FiLink } from 'react-icons/fi'
 
+import { projects } from '@/constants/projects'
 import { cn } from '@/lib/utils'
 
 interface ProjectsListProps {
@@ -86,55 +87,3 @@ export function ProjectsList({
     </div>
   )
 }
-
-const projects = [
-  {
-    title: 'Ignews',
-    description:
-      'A blog platform with subscription payment integration and Prismic CMS integration with Next.js',
-    image: 'https://th.bing.com/th/id/OIG1.IzQyJBTnzNhgY51zESZd?pid=ImgGn',
-    link: 'https://ignews-two-nu.vercel.app/',
-    preview: 'https://ignews-two-nu.vercel.app/',
-    techStack: ['Next.js', 'FaunaDB', 'Stripe', 'Prismic CMS'],
-  },
-  {
-    title: 'Ignews2',
-    description: 'A blog platform with subscription payment integration',
-    image: 'https://th.bing.com/th/id/OIG1.IzQyJBTnzNhgY51zESZd?pid=ImgGn',
-    link: 'https://ignews-two-nu.vercel.app/',
-    preview: 'https://ignews-two-nu.vercel.app/',
-    techStack: ['Next.js', 'FaunaDB', 'Stripe', 'Prismic CMS'],
-  },
-  {
-    title: 'Ignews3',
-    description: 'A blog platform with subscription payment integration',
-    image: 'https://th.bing.com/th/id/OIG1.IzQyJBTnzNhgY51zESZd?pid=ImgGn',
-    link: 'https://ignews-two-nu.vercel.app/',
-    preview: 'https://ignews-two-nu.vercel.app/',
-    techStack: ['Next.js', 'FaunaDB', 'Stripe', 'Prismic CMS'],
-  },
-  {
-    title: 'Ignews4',
-    description: 'A blog platform with subscription payment integration',
-    image: 'https://th.bing.com/th/id/OIG1.IzQyJBTnzNhgY51zESZd?pid=ImgGn',
-    link: 'https://ignews-two-nu.vercel.app/',
-    preview: 'https://ignews-two-nu.vercel.app/',
-    techStack: ['Next.js', 'FaunaDB', 'Stripe', 'Prismic CMS'],
-  },
-  {
-    title: 'Ignews5',
-    description: 'A blog platform with subscription payment integration',
-    image: 'https://ignews-two-nu.vercel.app/images/avatar.svg',
-    link: 'https://ignews-two-nu.vercel.app/',
-    preview: 'https://ignews-two-nu.vercel.app/',
-    techStack: ['Next.js', 'FaunaDB', 'Stripe', 'Prismic CMS'],
-  },
-  {
-    title: 'Ignews6',
-    description: 'A blog platform with subscription payment integration',
-    image: 'https://ignews-two-nu.vercel.app/images/avatar.svg',
-    link: 'https://ignews-two-nu.vercel.app/',
-    preview: 'https://ignews-two-nu.vercel.app/',
-    techStack: ['Next.js', 'FaunaDB', 'Stripe', 'Prismic CMS'],
-  },
-]

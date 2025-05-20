@@ -3,65 +3,102 @@ import Image from 'next/image'
 import { Header } from '@/components/header'
 
 export function TechStack() {
+  const priorityTechs = techStack.filter((tech) => tech.priority)
+  const regularTechs = techStack.filter((tech) => !tech.priority)
+
   return (
     <div className="space-y-3 text-center">
       <Header
         title="My Tech Stack"
-        subtitle="Technologies I’ve been working with recently"
+        subtitle="Technologies I've been working with recently"
       />
 
-      <ul className="grid grid-cols-[repeat(auto-fill,3rem)] justify-center gap-6 pt-2 text-xs text-muted-foreground md:grid-cols-[repeat(auto-fill,6rem)] md:gap-8 md:pt-8 md:text-sm">
-        {techStack.map((tech) => (
-          <li
-            key={tech.alt}
-            className="flex flex-col items-center justify-center rounded-lg transition duration-300 ease-in-out hover:scale-110 hover:shadow-xl"
-          >
-            <Image
-              alt={tech.alt}
-              src={tech.src}
-              width={76}
-              height={76}
-              data-dark={tech.dark}
-              className="mb-1 rounded-md p-2 data-[dark=true]:dark:bg-primary"
-            />
-            {tech.alt}
-          </li>
-        ))}
-      </ul>
+      <div>
+        <ul className="grid grid-cols-[repeat(auto-fill,3rem)] justify-center gap-6 rounded-xl border-2 border-primary p-6 pt-2 text-xs text-muted-foreground md:grid-cols-[repeat(auto-fill,6rem)] md:gap-8 md:pt-8 md:text-sm">
+          {priorityTechs.map((tech) => (
+            <li
+              key={tech.alt}
+              className="flex flex-col items-center justify-center rounded-lg transition duration-300 ease-in-out hover:scale-110 hover:shadow-xl"
+            >
+              <Image
+                alt={tech.alt}
+                src={tech.src}
+                width={76}
+                height={76}
+                data-dark={tech.dark}
+                className="mb-1 rounded-md p-2 data-[dark=true]:dark:bg-primary"
+              />
+              {tech.alt}
+            </li>
+          ))}
+        </ul>
+
+        <ul className="grid grid-cols-[repeat(auto-fill,1rem)] justify-center gap-2 pt-2 text-xs text-muted-foreground md:grid-cols-[repeat(auto-fill,3rem)] md:gap-8 md:pt-8 md:text-sm">
+          {regularTechs.map((tech) => (
+            <li
+              key={tech.alt}
+              className="flex flex-col items-center justify-center rounded-lg transition duration-300 ease-in-out hover:scale-110 hover:shadow-xl"
+            >
+              <Image
+                alt={tech.alt}
+                src={tech.src}
+                width={46}
+                height={46}
+                data-dark={tech.dark}
+                className="mb-1 rounded-md p-2 data-[dark=true]:dark:bg-primary"
+              />
+              {tech.alt}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }
 
 const techStack = [
   {
-    alt: 'Node.js',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg',
+    alt: 'TypeScript',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+    priority: true,
   },
   {
     alt: 'React',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+    priority: true,
   },
   {
     alt: 'Vite.js',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg',
+    priority: true,
   },
   {
-    alt: 'Tailwind CSS',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+    alt: 'Node.js',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg',
+    priority: true,
   },
   {
     alt: 'Next.js',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
     dark: true,
+    priority: true,
   },
+
+  {
+    alt: 'Tailwind CSS',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+    priority: true,
+  },
+  {
+    alt: 'Python',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+    priority: true,
+  },
+
   {
     alt: 'Terraform',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-plain.svg',
     dark: true,
-  },
-  {
-    alt: 'TypeScript',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
   },
   {
     alt: 'Vercel',
@@ -135,10 +172,7 @@ const techStack = [
     alt: 'PostgreSQL',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg',
   },
-  {
-    alt: 'Python',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
-  },
+
   {
     alt: 'Redis',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg',
