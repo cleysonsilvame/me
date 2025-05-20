@@ -1,10 +1,11 @@
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { FaGithub } from 'react-icons/fa'
 import { FiLink } from 'react-icons/fi'
 
-import { projects } from '@/constants/projects'
+import { useProjects } from '@/hooks/use-projects'
+import { Link } from '@/i18n/navigation'
 import { cn } from '@/lib/utils'
 
 interface ProjectsListProps {
@@ -16,6 +17,10 @@ export function ProjectsList({
   className,
   variant = 'full',
 }: ProjectsListProps) {
+  const t = useTranslations('ProjectsListComponent')
+
+  const projects = useProjects()
+
   const filteredProjects = projects.slice(
     0,
     variant === 'compact' ? 2 : projects.length,
@@ -58,7 +63,7 @@ export function ProjectsList({
                 className="align-middle text-sm leading-relaxed text-card-foreground underline"
               >
                 <FiLink className="mr-1 inline-block" />
-                Live Preview
+                {t('previewLink')}
               </a>
               <a
                 href={project.link}
@@ -66,7 +71,7 @@ export function ProjectsList({
                 className="align-middle text-sm leading-relaxed text-card-foreground underline"
               >
                 <FaGithub className="mr-1 inline-block" />
-                View Code
+                {t('viewCodeLink')}
               </a>
             </div>
           </div>
@@ -79,7 +84,7 @@ export function ProjectsList({
           href={'/projects'}
         >
           <div className="flex size-full flex-1 items-center justify-center gap-2 bg-background px-3 py-2">
-            <p className="font-bold">More</p>
+            <p className="font-bold">{t('more')}</p>
             <ArrowRight className="size-4" />
           </div>
         </Link>

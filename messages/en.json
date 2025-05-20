@@ -1,0 +1,27 @@
+{
+  "HomePage": {
+    "header": {
+      "title": "Projects",
+      "subtitle": "Things I've built so far"
+    }
+  },
+  "HeroComponent": {
+    "title": "Hi",
+    "presentation": "My name is",
+    "description": "I build things for web."
+  },
+  "TechStackComponent": {
+    "header": {
+      "title": "My Tech Stack",
+      "subtitle": "Technologies I've been working with recently"
+    }
+  },
+  "ProjectsListComponent": {
+    "previewLink": "Live Preview",
+    "viewCodeLink": "View Code",
+    "more": "More"
+  },
+  "projects": {
+    "githubBlog": "Github Blog is an application developed during Rocketseat's Ignite React Challenge 03. The goal is to consume the Github API to list publications (issues) from a repository, display details of each publication, and allow searching for posts."
+  }
+}

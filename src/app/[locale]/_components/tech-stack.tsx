@@ -1,17 +1,17 @@
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 import { Header } from '@/components/header'
 
 export function TechStack() {
+  const t = useTranslations('TechStackComponent')
+
   const priorityTechs = techStack.filter((tech) => tech.priority)
   const regularTechs = techStack.filter((tech) => !tech.priority)
 
   return (
     <div className="space-y-3 text-center">
-      <Header
-        title="My Tech Stack"
-        subtitle="Technologies I've been working with recently"
-      />
+      <Header title={t('header.title')} subtitle={t('header.subtitle')} />
 
       <div>
         <ul className="grid grid-cols-[repeat(auto-fill,3rem)] justify-center gap-6 rounded-xl border-2 border-primary p-6 pt-2 text-xs text-muted-foreground md:grid-cols-[repeat(auto-fill,6rem)] md:gap-8 md:pt-8 md:text-sm">

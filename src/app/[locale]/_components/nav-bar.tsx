@@ -1,10 +1,11 @@
-import Link from 'next/link'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 import { BurgerMenu } from '@/components/burger-menu'
+import { LocaleToggle } from '@/components/locale-toggle'
 import { Logo } from '@/components/logo'
 import { ModeToggle } from '@/components/mode-toggle'
 import { NavLink } from '@/components/nav-link'
+import { Link } from '@/i18n/navigation'
 
 export function NavBar() {
   return (
@@ -45,6 +46,7 @@ export function NavBar() {
           </FaLinkedin>
         </a>
 
+        <LocaleToggle />
         <ModeToggle />
 
         <BurgerMenu className="md:hidden" />

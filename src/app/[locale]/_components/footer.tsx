@@ -1,7 +1,6 @@
-import Link from 'next/link'
-
 import { Logo } from '@/components/logo'
 import { NavLink } from '@/components/nav-link'
+import { Link } from '@/i18n/navigation'
 
 export function Footer() {
   return (
