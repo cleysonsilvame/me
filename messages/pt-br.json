@@ -1,4 +1,9 @@
 {
+  "AboutComponent": {
+    "title": "Sobre mim",
+    "subtitle": "Um pouco sobre quem eu sou",
+    "content": "Sou um Desenvolvedor Web fascinado por transformar ideias em soluções inovadoras e eficientes. Desde cedo, a tecnologia me fascina e me motiva a resolver problemas com criatividade e expertise.\n\nMinha paixão se traduz em interfaces web intuitivas e responsivas, construídas com React, Typescript e Docker, sempre priorizando as melhores práticas. Adoro integrar inteligência artificial, dados geográficos e APIs (Python/Node.js) para criar experiências únicas.\n\nSou proativo, autônomo e adoro desafios! Contribuo ativamente para o sucesso da equipe, comunicando-me de forma clara e empática. Acredito em ambientes colaborativos e na troca de conhecimento.\n\nA qualidade do código é fundamental para mim. Por isso, aplico testes automatizados e os princípios SOLID em cada projeto. Também sou fã do Figma e da Geotecnologia, além de ter familiaridade com PHP, Java e C#.\n\nMinhas conquistas incluem o 3º lugar na FECEG com um projeto web inovador, o reconhecimento como aluno destaque na ETEC, a criação de robôs para automatizar tarefas e a liderança na refatoração de uma aplicação Javascript para Typescript. Fui premiado 5 vezes como destaque na empresa, refletindo meu compromisso com a excelência.\n\nSe você busca um profissional resiliente, com espírito de equipe e focado em resultados, que está sempre em busca de novos desafios e aprendizados, conte comigo!"
+  },
   "HeroComponent": {
     "title": "Olá",
     "presentation": "Meu nome é",

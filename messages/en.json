@@ -1,4 +1,9 @@
 {
+  "AboutComponent": {
+    "title": "About me",
+    "subtitle": "A bit about who I am",
+    "content": "I am a Web Developer passionate about transforming ideas into innovative and efficient solutions. Since early on, technology has fascinated me and motivates me to solve problems with creativity and expertise.\n\nMy passion translates into intuitive and responsive web interfaces, built with React, Typescript, and Docker, always prioritizing best practices. I love integrating artificial intelligence, geographic data, and APIs (Python/Node.js) to create unique experiences.\n\nI am proactive, autonomous, and love challenges! I actively contribute to team success, communicating clearly and empathetically. I believe in collaborative environments and knowledge sharing.\n\nCode quality is fundamental to me. That's why I apply automated tests and SOLID principles in every project. I'm also a fan of Figma and Geotechnology, besides being familiar with PHP, Java, and C#.\n\nMy achievements include 3rd place at FECEG with an innovative web project, recognition as a standout student at ETEC, creating robots to automate tasks, and leading the refactoring of a Javascript application to Typescript. I was awarded 5 times as a company highlight, reflecting my commitment to excellence.\n\nIf you're looking for a resilient professional with team spirit and focused on results, who is always seeking new challenges and learning opportunities, count on me!"
+  },
   "HomePage": {
     "header": {
       "title": "Projects",

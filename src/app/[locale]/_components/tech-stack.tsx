@@ -10,8 +10,10 @@ export function TechStack() {
   const regularTechs = techStack.filter((tech) => !tech.priority)
 
   return (
-    <div className="space-y-3 text-center">
-      <Header title={t('header.title')} subtitle={t('header.subtitle')} />
+    <div className="space-y-8 text-center">
+      <div>
+        <Header title={t('header.title')} subtitle={t('header.subtitle')} />
+      </div>
 
       <div>
         <ul className="grid grid-cols-[repeat(auto-fill,3rem)] justify-center gap-6 rounded-xl border-2 border-primary p-6 pt-2 text-xs text-muted-foreground md:grid-cols-[repeat(auto-fill,6rem)] md:gap-8 md:pt-8 md:text-sm">
