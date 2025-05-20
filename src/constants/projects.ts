@@ -16,7 +16,7 @@ export const projects = [
     image:
       'https://raw.githubusercontent.com/cleysonsilvame/codebase-react-ignite/refs/heads/main/chapter-3/.github/iframe.png',
     link: 'https://github.com/cleysonsilvame/codebase-react-ignite/tree/main/chapter-3',
-    preview: 'https://ignews-two-nu.vercel.app/',
+    preview: 'https://ignews.cleysonsilva.dev/',
     techStack: ['Next.js', 'FaunaDB', 'Stripe', 'Prismic CMS'],
   },
 ]
