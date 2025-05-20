@@ -33,7 +33,7 @@ export function TechStack() {
           ))}
         </ul>
 
-        <ul className="grid grid-cols-[repeat(auto-fill,1rem)] justify-center gap-2 pt-2 text-xs text-muted-foreground md:grid-cols-[repeat(auto-fill,3rem)] md:gap-8 md:pt-8 md:text-sm">
+        <ul className="grid grid-cols-[repeat(auto-fill,2rem)] justify-center gap-6 pt-2 text-xs text-muted-foreground md:grid-cols-[repeat(auto-fill,3rem)] md:gap-8 md:pt-8 md:text-sm">
           {regularTechs.map((tech) => (
             <li
               key={tech.alt}

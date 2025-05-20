@@ -15,8 +15,7 @@ export function useProjects() {
     },
     {
       title: 'Ignite Shop',
-      description:
-        'An e-commerce application developed. Features include product browsing, shopping cart functionality, and Stripe payment integration. Test the payment system using card number 4242 4242 4242 4242 with any future expiration date.',
+      description: t('igniteShop'),
       image:
         'https://raw.githubusercontent.com/cleysonsilvame/desafio-04-ignite-react-ignite-shop/refs/heads/main/.github/iframe.png',
       link: 'https://github.com/cleysonsilvame/desafio-04-ignite-react-ignite-shop',
@@ -25,8 +24,7 @@ export function useProjects() {
     },
     {
       title: 'Coffee Delivery',
-      description:
-        'Coffee Delivery is a fictional e-commerce application for selling coffee, where users can select coffees, add them to cart, fill in delivery address, and choose payment method. Project developed as a challenge for Rocketseat Ignite.',
+      description: t('coffeeDelivery'),
       image:
         'https://raw.githubusercontent.com/cleysonsilvame/desafio-02-react-2023-coffee-delivery/refs/heads/main/.github/iframe.png',
       link: 'https://github.com/cleysonsilvame/desafio-02-react-2023-coffee-delivery',
@@ -35,8 +33,7 @@ export function useProjects() {
     },
     {
       title: 'Moveit',
-      description:
-        'Moveit is a gamified application designed to help those of us who spend long hours in front of the computer and often forget to exercise.',
+      description: t('moveit'),
       image:
         'https://raw.githubusercontent.com/cleysonsilvame/moveit/refs/heads/main/.github/iframe.png',
       link: 'https://github.com/cleysonsilvame/moveit',
@@ -45,8 +42,7 @@ export function useProjects() {
     },
     {
       title: 'Ignews',
-      description:
-        'A blog platform with Stripe payment integration for subscriptions. You can test the payment system using the test card number 4242 4242 4242 4242 with any future expiration date.',
+      description: t('ignews'),
       image:
         'https://raw.githubusercontent.com/cleysonsilvame/codebase-react-ignite/refs/heads/main/chapter-3/.github/iframe.png',
       link: 'https://github.com/cleysonsilvame/codebase-react-ignite/tree/main/chapter-3',

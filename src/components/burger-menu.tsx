@@ -1,4 +1,5 @@
 import { Menu } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -15,6 +16,8 @@ interface BurgerMenuProps {
 }
 
 export function BurgerMenu({ className }: BurgerMenuProps) {
+  const t = useTranslations('NavBarComponent')
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild className={className}>
@@ -25,13 +28,13 @@ export function BurgerMenu({ className }: BurgerMenuProps) {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem>
-          <NavLink href="/">Home</NavLink>
+          <NavLink href="/">{t('homeLink')}</NavLink>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <NavLink href="/projects">Projects</NavLink>
+          <NavLink href="/projects">{t('projectsLink')}</NavLink>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <NavLink href="/contact">Contact</NavLink>
+          <NavLink href="/contact">{t('contactLink')}</NavLink>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

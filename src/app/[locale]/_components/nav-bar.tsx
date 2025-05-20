@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 import { BurgerMenu } from '@/components/burger-menu'
@@ -8,6 +9,8 @@ import { NavLink } from '@/components/nav-link'
 import { Link } from '@/i18n/navigation'
 
 export function NavBar() {
+  const t = useTranslations('NavBarComponent')
+
   return (
     <nav className="fixed inset-x-0 top-0 z-40 flex items-center gap-2 border-b bg-background/80 p-4 backdrop-blur-sm md:gap-16">
       <Link href="/" className="mr-auto flex gap-4">
@@ -16,13 +19,13 @@ export function NavBar() {
 
       <ul className="hidden gap-16 font-medium text-muted-foreground md:flex">
         <li>
-          <NavLink href="/">Home</NavLink>
+          <NavLink href="/">{t('homeLink')}</NavLink>
         </li>
         <li>
-          <NavLink href="/projects">Projects</NavLink>
+          <NavLink href="/projects">{t('projectsLink')}</NavLink>
         </li>
         <li>
-          <NavLink href="/contact">Contact</NavLink>
+          <NavLink href="/contact">{t('contactLink')}</NavLink>
         </li>
       </ul>
 

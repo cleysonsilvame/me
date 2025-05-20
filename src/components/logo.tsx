@@ -6,6 +6,12 @@ export function Logo({ variant = 'primary' }: LogoProps) {
   const variants = {
     primary: (
       <div className="bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text font-poppins font-bold text-transparent">
+        <span className="row-span-2 inline-block text-4xl">&#123;</span>
+        <span className="row-span-2 inline-block text-4xl">&#125;</span>
+      </div>
+    ),
+    primary_old: (
+      <div className="bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text font-poppins font-bold text-transparent">
         <div className="grid grid-cols-[min-content_min-content_min-content] grid-rows-2 items-center">
           <span className="row-span-2 inline-block text-4xl">&#123;</span>
           <span className="-mb-2 text-3xl leading-none tracking-tight">

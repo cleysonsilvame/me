@@ -22,7 +22,7 @@ export function Footer() {
       </ul>
 
       <p className="ml-auto text-sm text-muted-foreground">
-        © 2024 Cleyson Silva
+        © 2025 Cleyson Silva
       </p>
     </div>
   )

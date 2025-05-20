@@ -22,6 +22,24 @@
     "more": "More"
   },
   "projects": {
-    "githubBlog": "Github Blog is an application developed during Rocketseat's Ignite React Challenge 03. The goal is to consume the Github API to list publications (issues) from a repository, display details of each publication, and allow searching for posts."
+    "githubBlog": "Github Blog is an application developed during Rocketseat's Ignite React Challenge 03. The goal is to consume the Github API to list publications (issues) from a repository, display details of each publication, and allow searching for posts.",
+    "igniteShop": "An e-commerce application developed. Features include product browsing, shopping cart functionality, and Stripe payment integration. Test the payment system using card number 4242 4242 4242 4242 with any future expiration date.",
+    "coffeeDelivery": "Coffee Delivery is a fictional e-commerce application for selling coffee, where users can select coffees, add them to cart, fill in delivery address, and choose payment method. Project developed as a challenge for Rocketseat Ignite.",
+    "moveit": "Moveit is a gamified application designed to help those of us who spend long hours in front of the computer and often forget to exercise.",
+    "ignews": "A blog platform with Stripe payment integration for subscriptions. You can test the payment system using the test card number 4242 4242 4242 4242 with any future expiration date."
+  },
+  "NavBarComponent": {
+    "homeLink": "Home",
+    "projectsLink": "Projects",
+    "contactLink": "Contact"
+  },
+  "ModeToggleComponent": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "ContactPage": {
+    "description": "For any questions, please send me a <link>message!</link>"
   }
 }
