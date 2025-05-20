@@ -85,16 +85,20 @@ const techStack = [
   },
 
   {
-    alt: 'Tailwind CSS',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
-    priority: true,
-  },
-  {
     alt: 'Python',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
     priority: true,
   },
-
+  {
+    alt: 'Google Cloud',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg',
+    priority: true,
+  },
+  {
+    alt: 'Docker',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg',
+    priority: true,
+  },
   {
     alt: 'Terraform',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-plain.svg',
@@ -106,6 +110,10 @@ const techStack = [
     dark: true,
   },
   {
+    alt: 'Tailwind CSS',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+  },
+  {
     alt: 'Swagger',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg',
   },
@@ -114,24 +122,12 @@ const techStack = [
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg',
   },
   {
-    alt: 'Docker',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg',
-  },
-  {
     alt: 'Kubernetes',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg',
   },
   {
     alt: 'AWS',
     src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
-  },
-  {
-    alt: 'Google Cloud',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg',
-  },
-  {
-    alt: 'Azure',
-    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg',
   },
   {
     alt: 'Express',
