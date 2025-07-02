@@ -5,6 +5,25 @@ export function useProjects() {
 
   return [
     {
+      title: 'AI Personal Coach',
+      description: t('aiPersonalCoach'),
+      image:
+        'https://raw.githubusercontent.com/cleysonsilvame/ai-personal-coach/main/.github/iframe.png',
+      link: 'https://github.com/cleysonsilvame/ai-personal-coach',
+      preview: 'https://ai-personal-coach.cleysonsilva.dev/',
+      techStack: [
+        'React Router 7',
+        'TypeScript',
+        'Vite',
+        'Tailwind CSS',
+        'ShadcnUI',
+        'Drizzle ORM',
+        'SQLite/Turso',
+        'OpenAI API',
+        'Embedding Search',
+      ],
+    },
+    {
       title: 'Github Blog',
       description: t('githubBlog'),
       image:

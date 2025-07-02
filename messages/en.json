@@ -27,6 +27,7 @@
     "more": "More"
   },
   "projects": {
+    "aiPersonalCoach": "AI Personal Coach is an application that transforms personal goals into structured plans with automatic refinement via AI. Users describe personal goals simply and rely on a specialized coaching chatbot to refine, structure, and detail each goal, elevating clarity and organization for personal development.",
     "githubBlog": "Github Blog is an application developed during Rocketseat's Ignite React Challenge 03. The goal is to consume the Github API to list publications (issues) from a repository, display details of each publication, and allow searching for posts.",
     "igniteShop": "An e-commerce application developed. Features include product browsing, shopping cart functionality, and Stripe payment integration. Test the payment system using card number 4242 4242 4242 4242 with any future expiration date.",
     "coffeeDelivery": "Coffee Delivery is a fictional e-commerce application for selling coffee, where users can select coffees, add them to cart, fill in delivery address, and choose payment method. Project developed as a challenge for Rocketseat Ignite.",
