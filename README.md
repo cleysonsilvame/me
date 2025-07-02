@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  Cleyson Silva - Portfolio
+</h1>
 
-## Getting Started
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licenca">Licença</a>
+</p>
 
-First, run the development server:
+<p align="center">
+  <a href="https://github.com/cleysonsilvame/me/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/cleysonsilvame/me.svg">
+  </a>
+
+  <a href="https://github.com/cleysonsilvame/me/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/cleysonsilvame/me.svg">
+  </a>
+
+  <img alt="GitHub" src="https://img.shields.io/github/license/cleysonsilvame/me.svg">
+</p>
+
+<p float="center">
+  <img alt="Portfolio Cleyson Silva" src=".github/iframe-notebook.png" width="100%" >
+</p>
+
+## 🚀 Tecnologias
+
+Este projeto foi desenvolvido com as seguintes tecnologias:
+
+- **Next.js 15** - Framework React com App Router
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Framework CSS utilitário
+- **Framer Motion** - Animações
+- **Next-intl** - Internacionalização (i18n)
+- **Next-themes** - Gerenciamento de temas (dark/light)
+- **Radix UI** - Componentes acessíveis
+- **Lucide React** - Ícones
+- **React Icons** - Biblioteca de ícones
+
+## 💻 Projeto
+
+Este é o portfólio pessoal do Cleyson Silva, um desenvolvedor web apaixonado por transformar ideias em soluções inovadoras e eficientes. O projeto apresenta uma interface moderna e responsiva com suporte a múltiplos idiomas (Português e Inglês) e temas claro/escuro.
+
+### Sobre o Desenvolvedor
+
+Cleyson é um desenvolvedor web que se destaca por:
+- Desenvolver interfaces web intuitivas e responsivas
+- Utilizar React, TypeScript e Docker com melhores práticas
+- Integrar inteligência artificial, dados geográficos e APIs
+- Aplicar testes automatizados e princípios SOLID
+- Contribuir ativamente para o sucesso da equipe
+
+## ✨ Funcionalidades
+
+- **Design Responsivo** - Interface adaptável para diferentes dispositivos
+- **Tema Escuro/Claro** - Alternância entre modos de visualização
+- **Internacionalização** - Suporte para Português e Inglês
+- **Animações Suaves** - Transições e animações com Framer Motion
+- **Seções Principais**:
+  - Hero com apresentação pessoal
+  - Sobre mim com informações detalhadas
+  - Stack tecnológico
+  - Portfólio de projetos
+  - Página de contato
+
+## 🛠️ Como executar
 
 ```bash
+# Clone o repositório
+git clone https://github.com/cleysonsilvame/me.git
+
+# Entre no diretório
+cd me
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000) para visualizar o projeto.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## :memo: Licença
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## Learn More
+### Autor
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<a href="https://github.com/cleysonsilvame/" title="Cleyson Silva">
+ <img style="border-radius: 50%;" src="https://raw.githubusercontent.com/cleysonsilvame/cleysonsilvame/master/.github/cleyson-rounded.png" width="100px;" alt="Cleyson Silva">
+ <br />
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<sub><b>Cleyson Silva</b></sub> 🚀</a>
 
-## Deploy on Vercel
+👋🏽 Entre em contato!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[![Linkedin Badge](https://img.shields.io/badge/-Cleyson_Silva-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/cleyson-silva-639b01188/)](https://www.linkedin.com/in/cleyson-silva-639b01188/) [![Gmail Badge](https://img.shields.io/badge/-cleysonsilva.me@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:cleysonsilva.me@gmail.com)](mailto:cleysonsilva.me@gmail.com)
