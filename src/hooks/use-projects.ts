@@ -8,7 +8,7 @@ export function useProjects() {
       title: 'AI Personal Coach',
       description: t('aiPersonalCoach'),
       image:
-        'https://raw.githubusercontent.com/cleysonsilvame/ai-personal-coach/main/.github/iframe.png',
+        'https://raw.githubusercontent.com/cleysonsilvame/ai-personal-coach/main/.github/iframe-notebook.png',
       link: 'https://github.com/cleysonsilvame/ai-personal-coach',
       preview: 'https://ai-personal-coach.cleysonsilva.dev/',
       techStack: [
