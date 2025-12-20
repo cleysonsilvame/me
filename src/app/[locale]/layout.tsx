@@ -1,6 +1,5 @@
 import './globals.css'
 
-import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
@@ -8,6 +7,10 @@ import { setRequestLocale } from 'next-intl/server'
 
 import { ScrollProgress } from '@/app/[locale]/_components/scroll-progress'
 import { routing } from '@/i18n/routing'
+import {
+  generateMetadata as generateMeta,
+  getSiteMetadata,
+} from '@/lib/metadata'
 import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/providers/theme-provider'
 
@@ -22,9 +25,22 @@ const poppins = Poppins({
   weight: ['400', '500', '600', '700'],
 })
 
-export const metadata: Metadata = {
-  title: 'Cleyson Silva',
-  description: 'Software Engineer',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const siteMetadata = getSiteMetadata(locale)
+
+  return generateMeta(
+    {
+      title: siteMetadata.title,
+      description: siteMetadata.description,
+      url: '',
+    },
+    locale,
+  )
 }
 
 export default async function LocaleLayout({
