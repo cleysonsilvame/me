@@ -66,7 +66,6 @@ export default async function Image() {
             display: 'flex',
             alignItems: 'center',
             gap: '16px',
-            zIndex: 1,
           }}
         >
           <div
@@ -93,7 +92,6 @@ export default async function Image() {
             display: 'flex',
             flexDirection: 'column',
             gap: '20px',
-            zIndex: 1,
             maxWidth: '1000px',
           }}
         >
@@ -130,7 +128,6 @@ export default async function Image() {
             justifyContent: 'space-between',
             alignItems: 'center',
             width: '100%',
-            zIndex: 1,
           }}
         >
           <div
