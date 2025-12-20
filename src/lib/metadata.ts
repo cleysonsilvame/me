@@ -28,7 +28,24 @@ export function generateMetadata(
   metadata: SiteMetadata,
   locale: string,
 ): Metadata {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+  // Use Vercel environment variables for proper URL detection
+  // Priority: NEXT_PUBLIC_SITE_URL > Vercel URL > localhost fallback
+  const getBaseUrl = () => {
+    // If explicitly set, use it
+    if (process.env.NEXT_PUBLIC_SITE_URL) {
+      return process.env.NEXT_PUBLIC_SITE_URL
+    }
+
+    // On Vercel, use the deployment URL
+    if (process.env.VERCEL_URL) {
+      return `https://${process.env.VERCEL_URL}`
+    }
+
+    // Fallback for local development
+    return 'http://localhost:3000'
+  }
+
+  const baseUrl = getBaseUrl()
   const pageUrl = metadata.url ? `${baseUrl}${metadata.url}` : baseUrl
 
   // Use dynamic OG image generation for pages with dynamic content

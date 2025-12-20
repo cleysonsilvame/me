@@ -222,15 +222,38 @@ Use tools like:
 
 ## Environment Variables
 
-Add to `.env.local` for local development:
+**No configuration required!** The implementation automatically detects the correct URL for each environment.
+
+### Automatic Detection
+
+The code automatically detects the correct base URL:
+
+1. **Local Development**: `http://localhost:3000`
+2. **Vercel Preview**: `https://your-app-git-branch-user.vercel.app` (from `VERCEL_URL`)
+3. **Vercel Production**: `https://your-domain.com` (from `VERCEL_URL` or custom domain)
+
+### Manual Override (Optional)
+
+Only needed if you want to override the automatic detection:
+
+**Local Development** - Create `.env.local`:
 ```bash
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
-For production (Vercel automatically sets this):
+**Vercel Production** - Set in Vercel Dashboard → Settings → Environment Variables:
 ```bash
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
+NEXT_PUBLIC_SITE_URL=https://your-custom-domain.com
 ```
+
+### How It Works
+
+The implementation checks in this priority order:
+1. `NEXT_PUBLIC_SITE_URL` (if explicitly set)
+2. `VERCEL_URL` (automatically provided by Vercel, prefixed with `https://`)
+3. `http://localhost:3000` (fallback for local development)
+
+This ensures correct URLs in all environments without manual configuration.
 
 ## Migration Guide
 
