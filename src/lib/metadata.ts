@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
 
 export interface SiteMetadata {
+  /** The page title - will be used in OG tags and browser title */
   title: string
+  /** The page description - will be used in OG tags and meta description */
   description: string
+  /** Optional page URL path (e.g., '/projects'). Defaults to root if not provided */
   url?: string
+  /** Optional custom OG image URL. If not provided, will generate dynamic image via /api/og */
   image?: string
 }
 
@@ -12,6 +16,13 @@ export interface SiteMetadata {
  * @param metadata - The metadata for the page
  * @param locale - The current locale (pt-br or en)
  * @returns Metadata object for Next.js
+ * @example
+ * ```typescript
+ * generateMetadata(
+ *   { title: 'My Page', description: 'Description', url: '/my-page' },
+ *   'en'
+ * )
+ * ```
  */
 export function generateMetadata(
   metadata: SiteMetadata,
@@ -22,9 +33,8 @@ export function generateMetadata(
 
   // Use dynamic OG image generation for pages with dynamic content
   // The API route will cache the generated images efficiently
-  const ogImageUrl = metadata.image
-    ? metadata.image
-    : `${baseUrl}/api/og?title=${encodeURIComponent(metadata.title)}&description=${encodeURIComponent(metadata.description)}&locale=${locale}`
+  const ogImageUrl =
+    metadata.image || generateOgImageUrl(metadata, locale, baseUrl)
 
   return {
     title: metadata.title,
@@ -62,6 +72,21 @@ export function generateMetadata(
       images: [ogImageUrl],
     },
   }
+}
+
+/**
+ * Generates the OG image URL for dynamic image generation
+ * @param metadata - The page metadata
+ * @param locale - The current locale
+ * @param baseUrl - The base URL of the site
+ * @returns The full URL to the dynamic OG image
+ */
+function generateOgImageUrl(
+  metadata: SiteMetadata,
+  locale: string,
+  baseUrl: string,
+): string {
+  return `${baseUrl}/api/og?title=${encodeURIComponent(metadata.title)}&description=${encodeURIComponent(metadata.description)}&locale=${locale}`
 }
 
 /**

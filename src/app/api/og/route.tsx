@@ -3,6 +3,16 @@ import { NextRequest } from 'next/server'
 
 export const runtime = 'edge'
 
+// Cache duration constants for better maintainability
+const ONE_YEAR_SECONDS = 31536000 // 365 days
+const ONE_DAY_SECONDS = 86400 // 24 hours
+
+// Locale translations for consistency
+const LOCALE_TRANSLATIONS = {
+  'pt-br': 'PORTFÓLIO',
+  en: 'PORTFOLIO',
+} as const
+
 /**
  * OG Image Generation API Route with Caching Strategy
  *
@@ -155,7 +165,9 @@ export async function GET(request: NextRequest) {
                 letterSpacing: '2px',
               }}
             >
-              {locale === 'pt-br' ? 'PORTFÓLIO' : 'PORTFOLIO'}
+              {LOCALE_TRANSLATIONS[
+                locale as keyof typeof LOCALE_TRANSLATIONS
+              ] || LOCALE_TRANSLATIONS.en}
             </div>
           </div>
         </div>
@@ -166,12 +178,11 @@ export async function GET(request: NextRequest) {
         headers: {
           // Cache for 1 year (immutable based on query params)
           // stale-while-revalidate allows serving cached version while regenerating
-          'Cache-Control':
-            'public, immutable, s-maxage=31536000, stale-while-revalidate',
+          'Cache-Control': `public, immutable, s-maxage=${ONE_YEAR_SECONDS}, stale-while-revalidate`,
           // Additional Vercel-specific caching
-          'CDN-Cache-Control': 'public, s-maxage=31536000',
+          'CDN-Cache-Control': `public, s-maxage=${ONE_YEAR_SECONDS}`,
           // Browser cache for 1 day
-          'Vercel-CDN-Cache-Control': 'max-age=86400',
+          'Vercel-CDN-Cache-Control': `max-age=${ONE_DAY_SECONDS}`,
         },
       },
     )
