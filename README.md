@@ -58,12 +58,27 @@ Cleyson é um desenvolvedor web que se destaca por:
 - **Tema Escuro/Claro** - Alternância entre modos de visualização
 - **Internacionalização** - Suporte para Português e Inglês
 - **Animações Suaves** - Transições e animações com Framer Motion
+- **Open Graph Images** - Geração dinâmica de imagens OG com cache inteligente
 - **Seções Principais**:
   - Hero com apresentação pessoal
   - Sobre mim com informações detalhadas
   - Stack tecnológico
   - Portfólio de projetos
   - Página de contato
+
+### 🖼️ Open Graph Images
+
+O projeto implementa geração dinâmica de imagens Open Graph usando a API da Vercel:
+- Geração edge-based para performance global
+- Cache inteligente (1 ano) com stale-while-revalidate
+- Suporte completo a internacionalização
+- Otimização de custos (mínimas invocações de função)
+- Documentação completa em [`/docs`](./docs)
+
+Para mais detalhes, veja:
+- [Guia de Implementação](./docs/OG_IMAGE_IMPLEMENTATION.md)
+- [Guia de Testes](./docs/TESTING_GUIDE.md)
+- [Exemplos](./docs/README.md)
 
 ## 🛠️ Como executar
 
