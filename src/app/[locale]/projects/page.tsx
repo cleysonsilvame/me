@@ -14,12 +14,12 @@ export async function generateMetadata({
 
   const metadata = {
     'pt-br': {
-      title: 'Projetos - Cleyson Silva',
+      title: 'Projetos Web - React, TypeScript & Next.js | Cleyson Silva',
       description:
         'Confira os projetos que construí até agora, incluindo aplicações web com React, TypeScript, Next.js e muito mais.',
     },
     en: {
-      title: 'Projects - Cleyson Silva',
+      title: 'Web Projects - React, TypeScript & Next.js | Cleyson Silva',
       description:
         'Check out the projects I have built so far, including web applications with React, TypeScript, Next.js and more.',
     },

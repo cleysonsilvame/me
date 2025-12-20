@@ -12,12 +12,12 @@ export async function generateMetadata({
 
   const metadata = {
     'pt-br': {
-      title: 'Contato - Cleyson Silva',
+      title: 'Entre em Contato - Desenvolvedor Web | Cleyson Silva',
       description:
         'Entre em contato comigo através do LinkedIn. Vamos conversar sobre desenvolvimento web, projetos e oportunidades.',
     },
     en: {
-      title: 'Contact - Cleyson Silva',
+      title: 'Get in Touch - Web Developer | Cleyson Silva',
       description:
         "Get in touch with me through LinkedIn. Let's talk about web development, projects and opportunities.",
     },

@@ -42,9 +42,12 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url)
 
     // Extract parameters with defaults
-    const title = searchParams.get('title') || 'Cleyson Silva'
+    const title =
+      searchParams.get('title') ||
+      'Cleyson Silva - Full Stack Web Developer | React & TypeScript'
     const description =
-      searchParams.get('description') || 'Software Engineer - Portfolio'
+      searchParams.get('description') ||
+      'Web Developer passionate about creating innovative solutions'
     const locale = searchParams.get('locale') || 'en'
 
     // Generate the OG image using @vercel/og
@@ -76,29 +79,48 @@ export async function GET(request: NextRequest) {
             }}
           />
 
-          {/* Logo/Brand */}
+          {/* Logo/Brand - Using the actual braces logo design */}
           <div
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '16px',
+              gap: '20px',
             }}
           >
+            {/* Braces Logo */}
             <div
               style={{
-                width: '60px',
-                height: '60px',
-                background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
-                borderRadius: '12px',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '32px',
+                fontSize: '64px',
                 fontWeight: 'bold',
-                color: 'white',
+                background: 'linear-gradient(135deg, #3b82f6 0%, #10b981 100%)',
+                backgroundClip: 'text',
+                color: 'transparent',
+                letterSpacing: '-4px',
               }}
             >
-              CS
+              <span>&#123;</span>
+              <span>&#125;</span>
+            </div>
+            {/* Site name */}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0px',
+              }}
+            >
+              <div
+                style={{
+                  fontSize: '20px',
+                  fontWeight: '600',
+                  color: '#94a3b8',
+                  letterSpacing: '0.5px',
+                }}
+              >
+                cleysonsilva.me
+              </div>
             </div>
           </div>
 
@@ -107,13 +129,13 @@ export async function GET(request: NextRequest) {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '20px',
+              gap: '24px',
               maxWidth: '1000px',
             }}
           >
             <h1
               style={{
-                fontSize: '72px',
+                fontSize: '68px',
                 fontWeight: 'bold',
                 color: 'white',
                 margin: 0,
@@ -125,10 +147,10 @@ export async function GET(request: NextRequest) {
             </h1>
             <p
               style={{
-                fontSize: '32px',
+                fontSize: '28px',
                 color: '#9ca3af',
                 margin: 0,
-                lineHeight: 1.4,
+                lineHeight: 1.5,
                 maxWidth: '900px',
               }}
             >
@@ -147,7 +169,7 @@ export async function GET(request: NextRequest) {
           >
             <div
               style={{
-                fontSize: '24px',
+                fontSize: '22px',
                 color: '#6b7280',
                 display: 'flex',
                 alignItems: 'center',

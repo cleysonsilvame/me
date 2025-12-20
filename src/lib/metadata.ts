@@ -95,12 +95,13 @@ function generateOgImageUrl(
 export function getSiteMetadata(locale: string) {
   const translations = {
     'pt-br': {
-      title: 'Cleyson Silva - Desenvolvedor Web',
+      title:
+        'Cleyson Silva - Desenvolvedor Web Full Stack | React & TypeScript',
       description:
         'Desenvolvedor Web apaixonado por transformar ideias em soluções inovadoras e eficientes usando React, TypeScript e Docker.',
     },
     en: {
-      title: 'Cleyson Silva - Web Developer',
+      title: 'Cleyson Silva - Full Stack Web Developer | React & TypeScript',
       description:
         'Web Developer passionate about transforming ideas into innovative and efficient solutions using React, TypeScript and Docker.',
     },
