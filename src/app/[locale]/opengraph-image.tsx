@@ -1,56 +1,41 @@
+/* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from 'next/og'
-import { NextRequest } from 'next/server'
 
 export const runtime = 'edge'
 
-// Cache duration constants for better maintainability
-const ONE_YEAR_SECONDS = 31536000 // 365 days
-const ONE_DAY_SECONDS = 86400 // 24 hours
+export const size = {
+  width: 1200,
+  height: 630,
+}
 
-// Locale translations for consistency
-const LOCALE_TRANSLATIONS = {
-  'pt-br': 'PORTFÓLIO',
-  en: 'PORTFOLIO',
-} as const
+export const contentType = 'image/png'
 
-/**
- * OG Image Generation API Route with Caching Strategy
- *
- * This route generates dynamic Open Graph images using @vercel/og.
- *
- * CACHING STRATEGY:
- * 1. Static Generation: For pages with static content, Vercel automatically
- *    caches the generated images at the edge.
- * 2. Revalidation: Uses stale-while-revalidate to serve cached images while
- *    regenerating in the background when content changes.
- * 3. Query-based Caching: Each unique combination of query parameters
- *    (title, description, locale) generates a cached version.
- *
- * COST OPTIMIZATION:
- * - Images are generated once and cached at Vercel's edge network
- * - Subsequent requests serve the cached version (no function invocation)
- * - Cache is invalidated only when query parameters change
- * - stale-while-revalidate ensures users get instant responses
- *
- * USAGE:
- * - Dynamic: /api/og?title=My%20Page&description=Description&locale=en
- * - The same parameters will always return the cached image
- * - Different parameters generate new cached variants
- */
-export async function GET(request: NextRequest) {
+export default async function Image({
+  params,
+}: {
+  params: { locale: string }
+}) {
   try {
-    const { searchParams } = new URL(request.url)
+    const locale = params.locale || 'en'
 
-    // Extract parameters with defaults
-    const title =
-      searchParams.get('title') ||
-      'Cleyson Silva - Full Stack Web Developer | React & TypeScript'
-    const description =
-      searchParams.get('description') ||
-      'Web Developer passionate about creating innovative solutions'
-    const locale = searchParams.get('locale') || 'en'
+    const metadata = {
+      'pt-br': {
+        title:
+          'Cleyson Silva - Desenvolvedor Web Full Stack | React & TypeScript',
+        description:
+          'Desenvolvedor Web apaixonado por criar soluções inovadoras',
+        footer: 'PORTFÓLIO',
+      },
+      en: {
+        title: 'Cleyson Silva - Full Stack Web Developer | React & TypeScript',
+        description:
+          'Web Developer passionate about creating innovative solutions',
+        footer: 'PORTFOLIO',
+      },
+    }
 
-    // Generate the OG image using @vercel/og
+    const { title, description, footer } =
+      metadata[locale as keyof typeof metadata]
     return new ImageResponse(
       (
         <div
@@ -66,7 +51,6 @@ export async function GET(request: NextRequest) {
             fontFamily: 'system-ui, sans-serif',
           }}
         >
-          {/* Background gradient */}
           <div
             style={{
               position: 'absolute',
@@ -79,15 +63,15 @@ export async function GET(request: NextRequest) {
             }}
           />
 
-          {/* Logo/Brand - Using the actual braces logo design */}
           <div
             style={{
               display: 'flex',
-              alignItems: 'center',
+              alignItems: 'flex-end',
+              justifyContent: 'space-between',
               gap: '20px',
+              width: '100%',
             }}
           >
-            {/* Braces Logo */}
             <div
               style={{
                 display: 'flex',
@@ -103,24 +87,22 @@ export async function GET(request: NextRequest) {
               <span>&#123;</span>
               <span>&#125;</span>
             </div>
-            {/* Site name */}
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '0px',
+                borderRadius: '50%',
+                overflow: 'hidden',
+                width: '64px',
+                height: '64px',
               }}
             >
-              <div
-                style={{
-                  fontSize: '20px',
-                  fontWeight: '600',
-                  color: '#94a3b8',
-                  letterSpacing: '0.5px',
-                }}
-              >
-                cleysonsilva.me
-              </div>
+              <img
+                alt="Cleyson Silva"
+                src="https://cleysonsilva.dev/me.jpg"
+                width={64}
+              />
             </div>
           </div>
 
@@ -158,7 +140,6 @@ export async function GET(request: NextRequest) {
             </p>
           </div>
 
-          {/* Footer */}
           <div
             style={{
               display: 'flex',
@@ -187,9 +168,7 @@ export async function GET(request: NextRequest) {
                 letterSpacing: '2px',
               }}
             >
-              {LOCALE_TRANSLATIONS[
-                locale as keyof typeof LOCALE_TRANSLATIONS
-              ] || LOCALE_TRANSLATIONS.en}
+              {footer}
             </div>
           </div>
         </div>
@@ -197,15 +176,6 @@ export async function GET(request: NextRequest) {
       {
         width: 1200,
         height: 630,
-        headers: {
-          // Cache for 1 year (immutable based on query params)
-          // stale-while-revalidate allows serving cached version while regenerating
-          'Cache-Control': `public, immutable, s-maxage=${ONE_YEAR_SECONDS}, stale-while-revalidate`,
-          // Additional Vercel-specific caching
-          'CDN-Cache-Control': `public, s-maxage=${ONE_YEAR_SECONDS}`,
-          // Browser cache for 1 day
-          'Vercel-CDN-Cache-Control': `max-age=${ONE_DAY_SECONDS}`,
-        },
       },
     )
   } catch (error) {
