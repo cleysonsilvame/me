@@ -85,6 +85,11 @@ const techStack = [
     dark: true,
     priority: true,
   },
+  {
+    alt: 'Angular',
+    src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg',
+    priority: true,
+  },
 
   {
     alt: 'Python',
