@@ -27,16 +27,16 @@ export function useProjects() {
       title: 'Tiny Blockchain',
       description: t('tinyBlockchain'),
       image:
-        'https://raw.githubusercontent.com/cleysonsilvame/tiny-blockchain/main/.github/iframe-notebook.png',
+        'https://raw.githubusercontent.com/cleysonsilvame/tiny-blockchain/main/.github/images/screenshot.png',
       link: 'https://github.com/cleysonsilvame/tiny-blockchain',
       preview: 'https://tiny-blockchain.cleysonsilva.dev/',
       techStack: [
-        'React',
+        'Angular 21',
         'TypeScript',
-        'Vite',
         'Tailwind CSS',
-        'Blockchain',
-        'Cryptography',
+        'Signals',
+        'crypto-js',
+        'Vitest',
       ],
     },
     {
